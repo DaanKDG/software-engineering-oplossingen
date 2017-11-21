@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Connect Four</title>
+        <style>
+            body {
+                background: #eee;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 5px;
+            }
+
+            #game-base{
+              width: 640px;  
+              margin: 0 auto;
+              padding-top: 60px;
+            }
+
+            #game-table{
+              width: 434px;
+              height: 374px;
+              margin: 0 auto;
+
+              position: relative;
+            }
+
+            #game-table img {
+                width: 434px;
+                height: auto;
+            }
+
+            .disc{
+              position: absolute;
+              z-index: -1;
+              top: -55px;
+              left: 14px;
+              width: 46px;
+              height: 46px;
+              border-radius: 46px;
+              transition: all .2s;
+            }
+
+            .disc.red{
+              background: #d96666;
+            }
+
+            .disc.yellow{
+              background: #ffeb79;
+            }
+            
+            .displaybtn {
+        
+                display: none;
+                position: absolute;
+                top: 65%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: black;
+                color: yellow;
+                font-weight: bold;
+                font-family: "Arial";
+                font-size: 14px;
+                padding: 5px;
+                letter-spacing: 1px;
+                border: 4px solid black;
+                border-radius: 25px;
+                transition: opacity 0.5s;
+            }
+            .displaybtn:hover {
+               
+                background: black;
+                opacity: 0.6;
+                color: yellow;
+                transition: 0.5s ease;
+                border-radius: 25px;
+                border: 4px solid black;
+            }
+            .show {
+                display: block;
+            }
+    
+
+        </style>
+    </head>
+    <body>
+      <button id ="refresh" class="displaybtn">PLAY AGAIN</button>
+       <h1 id="winner"></h1>
+        <div id="game-base">
+          <div id="game-table">
+            <img src="board.png">
+           
+          </div>
+        </div>
+         
+        <script src="connectFourScript.js"></script>
+        
+    </body>
+</html>
